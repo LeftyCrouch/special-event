@@ -1,9 +1,15 @@
 QuestionSpecialEvent::Application.routes.draw do
+  resources :events
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#login'
+
+  post '/welcome' => 'welcome#create'
+
+  get '/logout' => 'welcome#logout', :as => 'logout'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

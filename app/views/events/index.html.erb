@@ -1,0 +1,79 @@
+<body>
+  <!-- nav bar -->
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Happy Anniversary</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li></li>
+          <li></li>
+          <li><%= link_to 'Logout', logout_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- <h1>Listing events</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Event hint title</th>
+      <th>Event hint descr</th>
+      <th>Event hint pic</th>
+      <th>Event timer</th>
+      <th>Event title</th>
+      <th>Event descr</th>
+      <th>Event pic</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead> -->
+
+  <div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <% i = 0 %>
+    <div class="row">
+      <% @events.each do |event| %>
+        <% i += 1 %>
+        <% if i % 4 == 0 %>
+          </div>
+          <div class="row">
+        <% end%>
+        <div class="col-lg-4">
+          <!-- <%= image_tag event.event_hint_pic %> -->
+          <img class="img-circle img-responsive" src="/assets/<%=event.event_hint_pic%>"  alt="Generic placeholder image">
+          <h2><%= event.event_hint_title %></h2>
+          <p><%= event.event_hint_descr %></p>
+          <% if Time.now.hour >= event.event_timer %>
+            <p><a class="btn btn-default" href="<%=event_path event %>" >View Details &raquo;</a></p>
+          <% else %>
+            <p><a class="btn btn-default">View Details &raquo;</a></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>
+
+    <script src="../../assets/js/jquery.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+            <script src="../../assets/js/holder.js"></script>
+
+</body>

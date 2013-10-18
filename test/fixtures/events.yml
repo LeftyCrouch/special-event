@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  event_hint_title: MyString
+  event_hint_descr: MyText
+  event_hint_pic: MyString
+  event_timer: 
+  event_title: MyString
+  event_descr: MyText
+  event_pic: MyString
+
+two:
+  event_hint_title: MyString
+  event_hint_descr: MyText
+  event_hint_pic: MyString
+  event_timer: 
+  event_title: MyString
+  event_descr: MyText
+  event_pic: MyString

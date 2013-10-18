@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event hint title:</strong>
+  <%= @event.event_hint_title %>
+</p>
+
+<p>
+  <strong>Event hint descr:</strong>
+  <%= @event.event_hint_descr %>
+</p>
+
+<p>
+  <strong>Event hint pic:</strong>
+  <%= @event.event_hint_pic %>
+</p>
+
+<p>
+  <strong>Event timer:</strong>
+  <%= @event.event_timer %>
+</p>
+
+<p>
+  <strong>Event title:</strong>
+  <%= @event.event_title %>
+</p>
+
+<p>
+  <strong>Event descr:</strong>
+  <%= @event.event_descr %>
+</p>
+
+<p>
+  <strong>Event pic:</strong>
+  <%= @event.event_pic %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
