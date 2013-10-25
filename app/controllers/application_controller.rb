@@ -7,5 +7,4 @@ class ApplicationController < ActionController::Base
   def validate_session
     redirect_to root_path unless session[:logged_in]
   end
-
 end
