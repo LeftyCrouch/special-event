@@ -2,21 +2,21 @@
   <!-- The container is used to define the width of the slideshow -->
   <div class="container">
     <div id="slides">
-      <% source_path = Rails.root.join('app','assets','images','images') %>
-      <% Dir["app/assets/images/images/*"].each do |item| %>
-        <img src="/assets/images/<%=item.delete "app/assets/images/jpg"%>jpg">
+      <%Dir.glob("app/assets/images/images/*").each do |pic|%>
+        <%= image_tag "images/#{pic.split("/").last}"%>
       <% end %>
     </div>
   </div>
   <!-- End SlidesJS Required: Start Slides -->
 
   <!-- SlidesJS Required: Link to jQuery -->
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <%= javascript_include_tag 'http://code.jquery.com/jquery-1.9.1.min.js'%>
   <!-- End SlidesJS Required -->
 
   <!-- SlidesJS Required: Link to jquery.slides.js -->
-  <script src="/assets/jquery.slides.min.js"></script>
-  <!-- End SlidesJS Required -->
+  <%= javascript_include_tag 'jquery.slides.min.js'%>
+  <!-- <script src="/assets/jquery.slides.min.js"></script>
+  End SlidesJS Required -->
 
   <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
   <script>
