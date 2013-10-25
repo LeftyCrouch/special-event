@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
   end
 
   def create
-    if params[:user_name] == "laura" && params[:password] == "102713"
+    if params[:user_name] == "laura" && params[:password] == ""
       session[:logged_in] = true
       redirect_to events_path
     else
