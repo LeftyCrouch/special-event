@@ -1,39 +1,45 @@
-<p id="notice"><%= notice %></p>
+<body>
+  <!-- nav bar -->
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Happy Anniversary Laura</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li></li>
+          <li><%= link_to 'Back', events_path %></li>
+          <li><%= link_to 'Logout', logout_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Event hint title:</strong>
-  <%= @event.event_hint_title %>
-</p>
+<div class="container marketing">
+  <hr class="featurette-divider">
 
-<p>
-  <strong>Event hint descr:</strong>
-  <%= @event.event_hint_descr %>
-</p>
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading"><%= @event.event_title %> <span class="text-muted"></span></h2>
+      <p class="lead"><%= @event.event_descr %> </p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-responsive" src="/assets/<%=@event.event_pic%>" alt="Generic placeholder image">
+    </div>
+  </div>
 
-<p>
-  <strong>Event hint pic:</strong>
-  <%= @event.event_hint_pic %>
-</p>
+  <hr class="featurette-divider">
+</div>
 
-<p>
-  <strong>Event timer:</strong>
-  <%= @event.event_timer %>
-</p>
-
-<p>
-  <strong>Event title:</strong>
-  <%= @event.event_title %>
-</p>
-
-<p>
-  <strong>Event descr:</strong>
-  <%= @event.event_descr %>
-</p>
-
-<p>
-  <strong>Event pic:</strong>
-  <%= @event.event_pic %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+</body>

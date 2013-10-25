@@ -20,7 +20,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li></li>
-          <li></li>
+          <li><%= link_to 'Do Not Click!', "http://shockingcats.ytmnd.com/" %></li>
           <li><%= link_to 'Logout', logout_path %></li>
         </ul>
       </div>
@@ -28,24 +28,13 @@
   </div>
 
   <%= render 'slideshow' %>
-<!-- <h1>Listing events</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Event hint title</th>
-      <th>Event hint descr</th>
-      <th>Event hint pic</th>
-      <th>Event timer</th>
-      <th>Event title</th>
-      <th>Event descr</th>
-      <th>Event pic</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead> -->
 
+  <br>
+  <br>
   <div class="container marketing">
+    <h1 class="introduction"> Plans for the Day! </h1>
+    <br>
+    <br>
     <!-- Three columns of text below the carousel -->
     <% i = 0 %>
     <div class="row">
@@ -72,10 +61,8 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
-
-    <script src="../../assets/js/jquery.js"></script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
-            <script src="../../assets/js/holder.js"></script>
-
+<!--    <script src="/assets/jquery.js"></script>
+        <script src="/assets/bootstrap.min.js"></script>
+            <script src="/assets/holder.js"></script>
+            -->
 </body>
