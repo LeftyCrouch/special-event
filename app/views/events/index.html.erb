@@ -45,8 +45,7 @@
           <div class="row">
         <% end%>
         <div class="col-lg-4">
-          <!-- <%= image_tag event.event_hint_pic %> -->
-          <img class="img-circle img-responsive" src="/assets/<%=event.event_hint_pic%>"  alt="Generic placeholder image">
+          <%=image_tag event.event_hint_pic, :class => 'img-circle img-responsive' %>
           <h2><%= event.event_hint_title %></h2>
           <p><%= event.event_hint_descr %></p>
           <% if Time.now.hour >= event.event_timer %>
