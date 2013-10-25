@@ -35,7 +35,7 @@
       <p class="lead"><%= @event.event_descr %> </p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-responsive" src="/assets/<%=@event.event_pic%>" alt="Generic placeholder image">
+      <%=image_tag @event.event_pic, :class => 'featurette-image img-responsive'%>
     </div>
   </div>
 
