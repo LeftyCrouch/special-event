@@ -42,4 +42,7 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <td><%= link_to 'Destroy', @event, method: :delete, data: {confirm: 'Are you sure' } %></td>
+
 <% end %>
